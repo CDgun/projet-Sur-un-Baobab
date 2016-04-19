@@ -9,15 +9,6 @@ has to be added
 Done
 
 ### 6.design
-Homepage
-
-archives
-
-courts-métrages
-
-photos
-
-contact
 
 
 
