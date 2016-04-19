@@ -15,6 +15,10 @@ archives
 
 courts-métrages
 
+photos
+
+contact
+
 
 
 
