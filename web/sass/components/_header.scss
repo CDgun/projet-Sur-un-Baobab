@@ -1,0 +1,127 @@
+.header{
+    width: 100%;
+    position: relative;
+    padding-bottom: 1em;
+    font-family: "Epic";
+    &-topbar{
+        background-color: $headerBackgroundColor;
+    }
+    &-lang{
+        position: absolute;
+        top: 0;
+        right: 0;
+        // font-size: 1.25rem;
+        padding: 1rem;
+        &__elem{
+            display: inline-block;
+            margin-right: 0.5em;
+            padding: 1em;
+            border-radius: 2em;
+            transition: 0.3s;
+            &:hover,&:focus{
+                background-color: $headerhoverColor;
+            }
+        }
+    }
+}
+.nav{
+    &-menu{
+        width: 100%;
+        display: inline;
+        margin: 0 auto;
+        text-align: center;
+
+        &-logo{
+            margin-right:2rem;
+            &__img{
+                width:10em;
+                height: auto;
+            }
+        }
+        &__element{
+            display: inline-block;
+        }
+        &__link{
+            font-size: 1.618rem;
+            display: block;
+            padding: 1rem;
+            margin-left: -0.5rem;
+            &-acceuil{
+                border-bottom: 0.3em solid $acceuilcolor;
+                &--active,&:hover,&:focus{
+                    font-size: 1.618rem;
+                    display: block;
+                    padding: 1rem;
+                    background-color:$acceuilcolor;
+                    transition:ease-in-out 0.5s;
+                }
+            }
+            &-archives{
+                border-bottom: 0.3em solid $archivescolor;
+                &--active,&:hover,&:focus{
+                    font-size: 1.618rem;
+                    display: block;
+                    padding: 1rem;
+                    background-color:$archivescolor;
+                    transition:ease-in-out 0.5s;
+
+                }
+            }
+            &-films{
+                border-bottom: 0.3em solid $filmscolor;
+                &--active,&:hover,&:focus{
+                    font-size: 1.618rem;
+                    display: block;
+                    padding: 1rem;
+                    background-color:$filmscolor;
+                    transition:ease-in-out 0.5s;
+
+                }
+            }
+            &-photos{
+                border-bottom: 0.3em solid $photoscolor;
+                &--active,&:hover,&:focus{
+                    font-size: 1.618rem;
+                    display: block;
+                    padding: 1rem;
+                    background-color:$photoscolor;
+                    transition:ease-in-out 0.5s;
+
+                }
+            }
+            &-studio{
+                border-bottom: 0.3em solid $studiocolor;
+                &--active,&:hover,&:focus{
+                    font-size: 1.618rem;
+                    display: block;
+                    padding: 1rem;
+                    background-color:$studiocolor;
+                    transition:ease-in-out 0.5s;
+
+                }
+            }
+            &-contact{
+                border-bottom: 0.3em solid $contactcolor;
+                &--active,&:hover,&:focus{
+                    font-size: 1.618rem;
+                    display: block;
+                    padding: 1rem;
+                    background-color:$contactcolor;
+                    transition:ease-in-out 0.5s;
+
+                }
+            }
+            &-donation{
+                border-bottom: 0.3em solid $donationcolor;
+                &--active,&:hover,&:focus{
+                    font-size: 1.618rem;
+                    display: block;
+                    padding: 1rem;
+                    background-color:$donationcolor;
+                    transition:ease-in-out 0.5s;
+
+                }
+            }
+        }
+    }
+}

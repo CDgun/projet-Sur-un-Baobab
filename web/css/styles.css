@@ -1,0 +1,392 @@
+/* Modus Versus Slicing
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * started at 16/02/2016
+ */
+/* Modus Versus Slicing
+ *
+ * /sass/settings/_paths.scss - Global paths variables
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+/* Modus Versus Slicing
+ *
+ * /sass/settings/_fonts.scss - Global fonts variables & fonts loading
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-regular-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-regular-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-italic-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-italic-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-italic-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-italic-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-semibold-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-semibold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-semibold-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-semibold-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-bold-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-bold-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-bolditalic-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Glyphs';
+  src: url("../assets/fonts/fontawesome/fontawesome-webfont.eot");
+  src: url("../assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fontawesome/fontawesome-webfont.woff2") format("woff2"), url("../assets/fonts/fontawesome/fontawesome-webfont.woff") format("woff"), url("../assets/fonts/fontawesome/fontawesome-webfont.ttf") format("truetype"), url("../assets/fonts/fontawesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Epic';
+  src: url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.eot");
+  src: url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.woff2") format("woff2"), url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.woff") format("woff"), url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.ttf") format("truetype"), url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Modus Versus Slicing
+ *
+ * /sass/tools/_utils.scss - Small utilities
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+.hidden {
+  display: none; }
+
+/* Modus Versus Slicing
+ *
+ * /sass/generic/_meyer-reset.scss - Eric Meyer's CSS reset - http://meyerweb.com/eric/tools/css/reset/
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Modus Versus Slicing
+ *
+ * /sass/generic/_box-sizing.scss - box-sizing reset
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* Modus Versus Slicing
+ *
+ * /sass/base/_root.scss - Base styles for root element
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+html {
+  background: white;
+  font: normal 16px "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+section {
+  margin-bottom: 2rem; }
+
+.header {
+  width: 100%;
+  position: relative;
+  padding-bottom: 1em;
+  font-family: "Epic"; }
+  .header-topbar {
+    background-color: white; }
+  .header-lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem; }
+    .header-lang__elem {
+      display: inline-block;
+      margin-right: 0.5em;
+      padding: 1em;
+      border-radius: 2em;
+      transition: 0.3s; }
+      .header-lang__elem:hover, .header-lang__elem:focus {
+        background-color: #CFCFC4; }
+
+.nav-menu {
+  width: 100%;
+  display: inline;
+  margin: 0 auto;
+  text-align: center; }
+  .nav-menu-logo {
+    margin-right: 2rem; }
+    .nav-menu-logo__img {
+      width: 10em;
+      height: auto; }
+  .nav-menu__element {
+    display: inline-block; }
+  .nav-menu__link {
+    font-size: 1.618rem;
+    display: block;
+    padding: 1rem;
+    margin-left: -0.5rem; }
+    .nav-menu__link-acceuil {
+      border-bottom: 0.3em solid #fff799; }
+      .nav-menu__link-acceuil--active, .nav-menu__link-acceuil:hover, .nav-menu__link-acceuil:focus {
+        font-size: 1.618rem;
+        display: block;
+        padding: 1rem;
+        background-color: #fff799;
+        transition: ease-in-out 0.5s; }
+    .nav-menu__link-archives {
+      border-bottom: 0.3em solid #FFB347; }
+      .nav-menu__link-archives--active, .nav-menu__link-archives:hover, .nav-menu__link-archives:focus {
+        font-size: 1.618rem;
+        display: block;
+        padding: 1rem;
+        background-color: #FFB347;
+        transition: ease-in-out 0.5s; }
+    .nav-menu__link-films {
+      border-bottom: 0.3em solid #77DD77; }
+      .nav-menu__link-films--active, .nav-menu__link-films:hover, .nav-menu__link-films:focus {
+        font-size: 1.618rem;
+        display: block;
+        padding: 1rem;
+        background-color: #77DD77;
+        transition: ease-in-out 0.5s; }
+    .nav-menu__link-photos {
+      border-bottom: 0.3em solid #779ECB; }
+      .nav-menu__link-photos--active, .nav-menu__link-photos:hover, .nav-menu__link-photos:focus {
+        font-size: 1.618rem;
+        display: block;
+        padding: 1rem;
+        background-color: #779ECB;
+        transition: ease-in-out 0.5s; }
+    .nav-menu__link-studio {
+      border-bottom: 0.3em solid #FF6961; }
+      .nav-menu__link-studio--active, .nav-menu__link-studio:hover, .nav-menu__link-studio:focus {
+        font-size: 1.618rem;
+        display: block;
+        padding: 1rem;
+        background-color: #FF6961;
+        transition: ease-in-out 0.5s; }
+    .nav-menu__link-contact {
+      border-bottom: 0.3em solid #FFD1DC; }
+      .nav-menu__link-contact--active, .nav-menu__link-contact:hover, .nav-menu__link-contact:focus {
+        font-size: 1.618rem;
+        display: block;
+        padding: 1rem;
+        background-color: #FFD1DC;
+        transition: ease-in-out 0.5s; }
+    .nav-menu__link-donation {
+      border-bottom: 0.3em solid #B39EB5; }
+      .nav-menu__link-donation--active, .nav-menu__link-donation:hover, .nav-menu__link-donation:focus {
+        font-size: 1.618rem;
+        display: block;
+        padding: 1rem;
+        background-color: #B39EB5;
+        transition: ease-in-out 0.5s; }
+
+.main {
+  width: 100%;
+  background-color: white;
+  color: black; }
+  .main-intro {
+    background: url("../assets/img/Bgr01.jpg") no-repeat fixed;
+    background-size: 100% auto;
+    padding: 5em;
+    margin-bottom: 5em; }
+    .main-intro-logo {
+      width: 40em;
+      margin: 0 auto;
+      display: block;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 40%; }
+  .main-inter {
+    background: url("../assets/img/Inter-bgr.svg") no-repeat;
+    width: 100%;
+    height: auto; }
+  .main-who {
+    width: 100%;
+    padding: 10em;
+    text-align: center;
+    background: white;
+    background: url("../assets/img/Bgr02.jpg") no-repeat fixed;
+    background-size: 100% auto;
+    height: 40rem;
+    color: white; }
+    .main-who-content {
+      width: 50rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 5rem;
+      border-radius: 1rem;
+      margin: 0 auto; }
+    .main-who-title {
+      font-size: 2.618rem;
+      margin-bottom: 1rem;
+      font-family: "Epic"; }
+    .main-who-text {
+      width: 35rem;
+      margin: 0 auto; }
+  .main-news {
+    padding: 3rem;
+    background: #D8F6FE; }
+    .main-news-title {
+      text-align: center;
+      font-size: 2.618rem;
+      font-family: "Epic";
+      margin-bottom: 2.618rem; }
+    .main-news-articles {
+      width: 50%; }
+      .main-news-articles__elem {
+        border: 0.5rem solid #FFB347;
+        background: #FFB347;
+        overflow: hidden;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #d5d5d5;
+        height: 15.375rem;
+        display: block; }
+        .main-news-articles__elem-box {
+          overflow: hidden;
+          float: left; }
+          .main-news-articles__elem-box-img {
+            display: block;
+            width: 18.75rem;
+            vertical-align: middle;
+            border: 0; }
+        .main-news-articles__elem-content {
+          margin-left: 18.75rem; }
+          .main-news-articles__elem-content-title {
+            display: block;
+            padding: 1rem; }
+            .main-news-articles__elem-content-title-link {
+              font-size: 1.618rem;
+              font-weight: bold;
+              font-family: "Epic"; }
+          .main-news-articles__elem-content-text {
+            background: white;
+            padding: 1rem;
+            padding-bottom: 4rem;
+            max-height: 10rem; }
+  .main-donation {
+    width: 100%;
+    padding: 10em;
+    text-align: center;
+    background: white;
+    background-size: 100% auto;
+    height: 40rem; }
+    .main-donation-title {
+      font-size: 2.618em;
+      margin-bottom: 1em;
+      font-family: "Epic"; }
+    .main-donation-text {
+      width: 40em;
+      margin: 5rem auto; }
+    .main-donation-button {
+      background: black;
+      color: white;
+      padding: 1.618rem;
+      margin: 1rem;
+      font-family: "Epic";
+      font-variant: small-caps;
+      border-radius: 1.618em; }
+
+footer {
+  width: 100%;
+  background: linear-gradient(270deg, #fd03d2, #fd4703, #fded03, #03f0fd);
+  background-size: 400%;
+  -webkit-animation: gradFade 20s ease infinite;
+  -moz-animation: gradFade 20s ease infinite;
+  animation: gradFade 20s ease infinite; }
+
+.footer {
+  padding: 2rem 0;
+  display: inline-block; }
+  .footer-logo {
+    width: 10rem;
+    padding: 1rem;
+    margin: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5rem;
+    float: left; }
+    .footer-logo:before {
+      content: "";
+      width: 10rem; }
+
+.subfooter {
+  width: 80%;
+  margin: 0 10%; }
+
+/*# sourceMappingURL=styles.css.map */
