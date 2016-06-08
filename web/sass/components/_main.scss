@@ -54,19 +54,34 @@
             text-align: center;
             font-size: 2.618rem;
             font-family: "Epic";
-            margin-bottom: 2.618rem
+            margin-bottom: 2.618rem;
         }
         &-articles{
-            width: 50%;
             &__elem{
                 border: 0.5rem solid $articleBgrColor;
                 background: $articleBgrColor;
-                overflow: hidden;
+                position: relative;
+
                 padding: 1rem;
                 margin-bottom: 1rem;
                 border-bottom: 1px solid #d5d5d5;
                 height: 15.375rem;
                 display:block;
+                &-link{
+                    font-weight: bold;
+                    background: $articleBgrColor;
+                    z-index: 1;
+                    position: absolute;
+                    left: 18rem;
+                    bottom: 0;
+                    padding: 1rem 2rem;
+                    &:hover,&:focus{
+                        background: $articlehoverColor;
+                        color: $whiteFontColor;
+                        box-shadow:2px 2px 5px $baseFontColor;
+                        text-shadow: 2px 2px 5px $baseFontColor;
+                    }
+                }
                 &-box{
                     overflow:hidden;
                     float: left;
@@ -87,12 +102,16 @@
                             font-size: 1.618rem;
                             font-weight: bold;
                             font-family: "Epic";
+                            &:hover,&:focus{
+                                color: $whiteFontColor;
+                                text-shadow: 2px 2px 5px $baseFontColor;
+                            }
                         }
                     }
                     &-text{
                         background: white;
                         padding: 1rem;
-                        padding-bottom: 4rem;
+                        padding-bottom: 5rem;
                         max-height: 10rem;
                     }
                 }
@@ -101,12 +120,16 @@
     }
     &-donation{
         width: 100%;
-        padding:10em;
+        margin-top:5rem;
         text-align: center;
         background: $whoBgrColor;
         background-size: 100% auto;
+        color: $whiteFontColor;
         height: 40rem;
+        background: url("../assets/img/Bgr03.jpg")no-repeat fixed;
+        background-size: 100% auto;
         &-title{
+            padding-top: 2.618rem;
             font-size: 2.618em;
             margin-bottom: 1em;
             font-family: "Epic";
@@ -115,15 +138,34 @@
         &-text{
             width: 40em;
             margin: 5rem auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 5rem;
+            border-radius: 1rem;
         }
         &-button{
             background: $donateButtonColor;
             color: $whiteFontColor;
             padding: 1.618rem;
-            margin: 1rem;
             font-family: "Epic";
             font-variant: small-caps;
             border-radius: 1.618em;
+            color: $baseFontColor !important;
+            box-shadow: 1px 1px 1px $donateShadowColor;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border-radius: 15px;
+            background: linear-gradient(top,  $donateGradientColor, $donateButtonColor);
+            background: -ms-linear-gradient(top,  $donateGradientColor,  $donateButtonColor);
+            background: -webkit-gradient(linear, left top, left bottom, from($donateGradientColor), to($donateButtonColor));
+            background: -moz-linear-gradient(top,  $donateGradientColor,  $donateButtonColor);
+            &:hover {
+                  color: $whiteFontColor !important;
+                  background: $donateButtonColor;
+                  background: linear-gradient(top,  $donateButtonColor,  $donateHoverGradientColor);
+                  background: -ms-linear-gradient(top,  $donateButtonColor,  $donateHoverGradientColor);
+                  background: -webkit-gradient(linear, left top, left bottom, from($donateButtonColor), to($donateHoverGradientColor));
+                  background: -moz-linear-gradient(top,  $donateButtonColor,  $donateHoverGradientColor);
+            }
         }
     }
 }

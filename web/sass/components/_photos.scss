@@ -1,0 +1,17 @@
+.photos{
+    background: $photoscolor;
+    &-container{
+        width:49rem;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        border-left: 5px double white;
+        border-right: 5px double white;
+        &__elem{
+        display: inline-block;
+        margin: 1rem;
+            &-img{
+                width: 20rem;
+            }
+        }
+    }
+}

@@ -307,61 +307,111 @@ section {
       font-size: 2.618rem;
       font-family: "Epic";
       margin-bottom: 2.618rem; }
-    .main-news-articles {
-      width: 50%; }
-      .main-news-articles__elem {
-        border: 0.5rem solid #FFB347;
+    .main-news-articles__elem {
+      border: 0.5rem solid #FFB347;
+      background: #FFB347;
+      position: relative;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #d5d5d5;
+      height: 15.375rem;
+      display: block; }
+      .main-news-articles__elem-link {
+        font-weight: bold;
         background: #FFB347;
+        z-index: 1;
+        position: absolute;
+        left: 18rem;
+        bottom: 0;
+        padding: 1rem 2rem; }
+        .main-news-articles__elem-link:hover, .main-news-articles__elem-link:focus {
+          background: #ba802d;
+          color: white;
+          box-shadow: 2px 2px 5px black;
+          text-shadow: 2px 2px 5px black; }
+      .main-news-articles__elem-box {
         overflow: hidden;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid #d5d5d5;
-        height: 15.375rem;
-        display: block; }
-        .main-news-articles__elem-box {
-          overflow: hidden;
-          float: left; }
-          .main-news-articles__elem-box-img {
-            display: block;
-            width: 18.75rem;
-            vertical-align: middle;
-            border: 0; }
-        .main-news-articles__elem-content {
-          margin-left: 18.75rem; }
-          .main-news-articles__elem-content-title {
-            display: block;
-            padding: 1rem; }
-            .main-news-articles__elem-content-title-link {
-              font-size: 1.618rem;
-              font-weight: bold;
-              font-family: "Epic"; }
-          .main-news-articles__elem-content-text {
-            background: white;
-            padding: 1rem;
-            padding-bottom: 4rem;
-            max-height: 10rem; }
+        float: left; }
+        .main-news-articles__elem-box-img {
+          display: block;
+          width: 18.75rem;
+          vertical-align: middle;
+          border: 0; }
+      .main-news-articles__elem-content {
+        margin-left: 18.75rem; }
+        .main-news-articles__elem-content-title {
+          display: block;
+          padding: 1rem; }
+          .main-news-articles__elem-content-title-link {
+            font-size: 1.618rem;
+            font-weight: bold;
+            font-family: "Epic"; }
+            .main-news-articles__elem-content-title-link:hover, .main-news-articles__elem-content-title-link:focus {
+              color: white;
+              text-shadow: 2px 2px 5px black; }
+        .main-news-articles__elem-content-text {
+          background: white;
+          padding: 1rem;
+          padding-bottom: 5rem;
+          max-height: 10rem; }
   .main-donation {
     width: 100%;
-    padding: 10em;
+    margin-top: 5rem;
     text-align: center;
     background: white;
     background-size: 100% auto;
-    height: 40rem; }
+    color: white;
+    height: 40rem;
+    background: url("../assets/img/Bgr03.jpg") no-repeat fixed;
+    background-size: 100% auto; }
     .main-donation-title {
+      padding-top: 2.618rem;
       font-size: 2.618em;
       margin-bottom: 1em;
       font-family: "Epic"; }
     .main-donation-text {
       width: 40em;
-      margin: 5rem auto; }
+      margin: 5rem auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 5rem;
+      border-radius: 1rem; }
     .main-donation-button {
-      background: black;
+      background: #B39EB5;
       color: white;
       padding: 1.618rem;
-      margin: 1rem;
       font-family: "Epic";
       font-variant: small-caps;
-      border-radius: 1.618em; }
+      border-radius: 1.618em;
+      color: black !important;
+      box-shadow: 1px 1px 1px black;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+      background: linear-gradient(top, #DBC2DE, #B39EB5);
+      background: -ms-linear-gradient(top, #DBC2DE, #B39EB5);
+      background: -webkit-gradient(linear, left top, left bottom, from(#DBC2DE), to(#B39EB5));
+      background: -moz-linear-gradient(top, #DBC2DE, #B39EB5); }
+      .main-donation-button:hover {
+        color: white !important;
+        background: #B39EB5;
+        background: linear-gradient(top, #B39EB5, #534954);
+        background: -ms-linear-gradient(top, #B39EB5, #534954);
+        background: -webkit-gradient(linear, left top, left bottom, from(#B39EB5), to(#534954));
+        background: -moz-linear-gradient(top, #B39EB5, #534954); }
+
+.photos {
+  background: #779ECB; }
+  .photos-container {
+    width: 49rem;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    border-left: 5px double white;
+    border-right: 5px double white; }
+    .photos-container__elem {
+      display: inline-block;
+      margin: 1rem; }
+      .photos-container__elem-img {
+        width: 20rem; }
 
 footer {
   width: 100%;
